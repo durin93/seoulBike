@@ -1,0 +1,1 @@
+INSERT INTO USER (ID, USER_ID, PASSWORD, NAME, EMAIL) VALUES (0, 'joseph', '0000', 'joseph', 'joe@naver.com');

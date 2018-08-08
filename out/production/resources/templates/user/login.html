@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>includes/header}}
+<body>
+<div class="issues issues--wrap mdl-layout mdl-js-layout has-drawer is-upgraded">
+
+    {{>includes/navBar}}
+
+    <main class="mdl-layout__content">
+        <div class="issues__posts mdl-grid">
+            <!-- Page Header -->
+            <header class="masthead" style="background-image: url('/img/home.jpg')">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 mx-auto">
+                            <div class="site-heading">
+                                <h1>Seoul Bike</h1>
+                                <span class="subheading">Rental Service</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+                <form action="/users/login" method="post">
+                    <div class="mdl-card__supporting-text">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin:0 auto">
+                            <input class="mdl-textfield__input" type="text" id="userId" name="userId" required>
+                            <label class="mdl-textfield__label" for="userId">User ID</label>
+                        </div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin:0 auto">
+                            <input class="mdl-textfield__input" type="password" id="password" name="password" required>
+                            <label class="mdl-textfield__label" for="password">Password</label>
+                        </div>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" style="margin:10px auto; width:200px;">로그인</button>
+                    </div>
+                </form>
+                <form action="/users/form" method="get">
+                    <div class="mdl-card__supporting-text">
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" style="margin:10px auto; width:200px;">회원가입</button>
+                    </div>
+                </form>
+                <a href="https://kauth.kakao.com/oauth/authorize?client_id=ff16e8e6cd2f7b78da632c2d47250fd3&redirect_uri=http://localhost:8080/api/kakao/oauth&response_type=code"><img src="/img/kakaoLogin2.png"></a>
+            </div>
+        </div>
+        {{>includes/footer}}
+</body>
+</html>
